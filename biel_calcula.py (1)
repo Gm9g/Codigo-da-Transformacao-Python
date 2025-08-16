@@ -1,0 +1,64 @@
+# Calculadora e programas com operadores e condições
+
+def calculadora_basica():
+    print("\n=== Calculadora Básica ===")
+    a = float(input("Digite o primeiro número: "))
+    b = float(input("Digite o segundo número: "))
+
+    print(f"Soma: {a + b}")
+    print(f"Subtração: {a - b}")
+    print(f"Multiplicação: {a * b}")
+    if b != 0:
+        print(f"Divisão: {a / b}")
+        print(f"Resto da divisão: {a % b}")
+    else:
+        print("Não é possível dividir por zero.")
+
+def maior_numero():
+    print("\n=== Comparação de Números ===")
+    x = int(input("Digite o primeiro número inteiro: "))
+    y = int(input("Digite o segundo número inteiro: "))
+
+    if x > y:
+        print(f"{x} é maior que {y}.")
+    elif y > x:
+        print(f"{y} é maior que {x}.")
+    else:
+        print("Os dois números são iguais.")
+
+def classificar_idade():
+    print("\n=== Classificação por Idade ===")
+    idade = int(input("Digite sua idade: "))
+
+    if idade < 12:
+        print("Você é uma Criança.")
+    elif idade < 18:
+        print("Você é um Adolescente.")
+    elif idade < 60:
+        print("Você é um Adulto.")
+    else:
+        print("Você é um Idoso.")
+
+def menu():
+    while True:
+        print("\n===== MENU =====")
+        print("1 - Calculadora Básica")
+        print("2 - Comparar dois números")
+        print("3 - Classificar idade")
+        print("4 - Sair")
+        opcao = input("Escolha uma opção: ")
+
+        if opcao == "1":
+            calculadora_basica()
+        elif opcao == "2":
+            maior_numero()
+        elif opcao == "3":
+            classificar_idade()
+        elif opcao == "4":
+            print("Saindo... Até logo!")
+            break
+        else:
+            print("Opção inválida, tente novamente.")
+
+# Programa principal
+menu()
