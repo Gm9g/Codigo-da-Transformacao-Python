@@ -1,0 +1,17 @@
+
+Html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Veja os Produtos a seguir:</title>
+</head>
+<body>
+    <h1>Listas de produtos</h1>
+    <ul>
+        {% for produto in produtos %}
+        <li>{{ produto.nome }} - R${{ produto.valor }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
